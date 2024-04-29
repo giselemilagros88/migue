@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Modo Oscuro</title>
+        <style>
+            /* Estilos para el modo claro */
+            body {
+                background-color: #ffffff;
+                color: #000000;
+            }
+
+            /* Estilos para el modo oscuro */
+            body.dark-mode {
+                background-color: #1a1a1a;
+                color: #ffffff;
+            }
+           
+            .padre{
+                display: flex;
+                justify-content: space-between;
+            }
+            .articulos{
+                width:80%;
+                display: flex;
+                justify-content:flex-start;
+                align-items: center;
+                gap:20px;
+            }
+            .modoOscuro{
+                width:20%;
+                text-align: center;
+            }
+
+            input{
+                width:100%;
+                border-radius: 5px;
+                border: 1px solid #2e2e2e;
+                padding: 5px;
+            }
+            .btnInput{
+                border-radius: 5px;
+                border: 1px solid #2e2e2e;
+                padding: 5px;
+                background-color: #7af4cc;
+                cursor: pointer;
+            }
+            .rojo{
+                background-color: #f75353;
+            }
+        </style>
+       
+    </head>
+    <body>
+        <h1>Ejemplos Manejo del Dom</h1>
+        <h2>Lista de Artículos</h2>
+        <div class="padre">
+            <div class="articulos">
+                <div>
+                    <input type="text" id="inputArticulo" placeholder="Nombre del artículo">
+                    <button class="btnInput" id="btnAgregar">Agregar Artículo</button>
+                </div>
+               
+                <div>
+                    <input type="number" id="inputNumero" placeholder="Número de artículo">
+                    <button class="btnInput rojo" id="btnEliminar">Eliminar Artículo</button>
+                </div>
+               
+                
+            </div>
+            <div class="modoOscuro">
+                <button id="darkModeButton">Cambiar a Modo Oscuro</button>
+            </div>
+        </div>
+       
+        <div>
+            <ul id="listaArticulos">
+
+            </ul>
+        </div>
+        <script src="./JS/script.js"></script>
+    </body>
+
+</html>
